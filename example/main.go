@@ -17,6 +17,7 @@ func main() {
 	err = client.SetActivity(client.Activity{
 		State:      "Heyy!!!",
 		Details:    "I'm running on rich-go :)",
+		Type:       client.ActivityTypeWatching,
 		LargeImage: "largeimageid",
 		LargeText:  "This is the large image :D",
 		SmallImage: "smallimageid",
@@ -30,7 +31,7 @@ func main() {
 			Start: &now,
 		},
 		Buttons: []*client.Button{
-			&client.Button{
+			{
 				Label: "GitHub",
 				Url:   "https://github.com/hugolgst/rich-go",
 			},
